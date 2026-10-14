@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080608">
+<meta name="description" content="WARSH Free Fire hassasiyet önerileri ve oyun rehberi.">
+<title>𝑾Á𝑹𝑺𝑯 — Free Fire Sensitivity</title>
+<style>
+:root{--red:#ff1738;--red2:#a90020;--bg:#070608;--panel:#0d0b0e;--muted:#aaa5ad;--line:#4d101d;--white:#f8f4f6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 12% 25%,#43000d66,transparent 34%),radial-gradient(ellipse at 85% 70%,#3a001166,transparent 30%),linear-gradient(135deg,#080608,#050405 65%,#10070a)}
+#network{position:fixed;inset:0;width:100%;height:100%;z-index:-1;opacity:.34;pointer-events:none}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topbar{position:sticky;top:0;z-index:20;background:#080608eF;border-bottom:1px solid #751023;backdrop-filter:blur(16px)}
+.nav{max-width:1400px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:clamp(25px,4vw,39px);font-weight:950;font-style:italic;letter-spacing:-2px;color:#fff;text-shadow:0 0 18px #ff1738;white-space:nowrap}
+.navlinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.navlinks a{font-size:13px;color:#c8c2c8;padding:10px 12px;border-radius:9px;transition:.2s}.navlinks a:hover{color:#fff;background:#ff17381b}
+.music-toggle{border:1px solid #79172a;background:#13090d;color:white;border-radius:999px;padding:9px 13px;font-size:12px;display:flex;align-items:center;gap:8px}
+.wrap{max-width:1400px;margin:auto;padding:0 22px}
+.hero{position:relative;min-height:360px;display:grid;place-items:center;text-align:center;overflow:hidden;border-bottom:1px solid #9e1029;background:radial-gradient(ellipse at center,#3a000d7a,transparent 60%)}
+.hero:before,.hero:after{content:"";position:absolute;inset:-20%;pointer-events:none}
+.hero:before{background:repeating-linear-gradient(125deg,transparent 0 70px,#ff17381b 71px 73px,transparent 74px 140px),repeating-linear-gradient(35deg,transparent 0 90px,#ff173817 91px 93px,transparent 94px 170px);animation:drift 18s linear infinite}
+.hero:after{background:radial-gradient(ellipse at 50% 40%,transparent 0 22%,#050405cc 74%)}
+@keyframes drift{to{transform:translate3d(30px,-20px,0)}}
+.hero-content{position:relative;z-index:1;padding:54px 18px 42px}.eyebrow{font-size:12px;letter-spacing:5px;color:#ff5b71;font-weight:800}.hero h1{font-size:clamp(55px,10vw,118px);line-height:.95;margin:12px 0;color:#fff;font-weight:1000;font-style:italic;letter-spacing:-5px;text-shadow:3px 4px 0 #7b0018,0 0 34px #ff1738a6}
+.hero h1 span{color:var(--red)}.hero p{max-width:650px;margin:15px auto;color:#d4cbd0;line-height:1.7}.hero p strong{color:#ff5268}
+.btn{border:1px solid #ff4a60;background:linear-gradient(180deg,#ff3150,#b70022);color:#fff;font-weight:800;border-radius:12px;padding:14px 22px;box-shadow:0 0 20px #ff17384c,inset 0 1px #ffffff50;transition:transform .18s,filter .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn.secondary{background:#100d10;border-color:#49202a;box-shadow:none}.btn.full{width:100%}
+.section-title{display:flex;align-items:center;gap:10px;font-weight:850;font-size:17px;margin:0 0 6px}.section-title:before{content:"";height:20px;width:4px;border-radius:4px;background:var(--red);box-shadow:0 0 12px var(--red)}
+.sub{font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 20px}
+.dashboard{display:grid;grid-template-columns:minmax(240px,.9fr) minmax(330px,1.25fr) minmax(250px,.9fr);gap:16px;padding-top:20px}
+.panel{background:linear-gradient(145deg,#100d10f2,#080709f5);border:1px solid #741528;border-radius:15px;padding:20px;box-shadow:0 0 24px #ff17380b,inset 0 0 22px #ff173805;min-width:0}
+.field{margin:17px 0}.field label{display:block;font-size:12px;color:#ddd4d9;margin-bottom:8px}.field select,.field input[type=text],.chat-input{width:100%;background:#080709;border:1px solid #40343a;border-radius:10px;color:white;padding:12px;outline:none}.field select:focus,.field input:focus,.chat-input:focus{border-color:var(--red);box-shadow:0 0 0 3px #ff17381b}
+.range-note{border:1px solid #8b1429;border-radius:999px;color:#ff6479;padding:9px 12px;font-size:12px;background:#17080d}
+.result-row{display:grid;grid-template-columns:24px minmax(0,1fr) 48px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #ffffff0b}.result-row:last-child{border-bottom:0}.aim-icon{color:var(--red);font-size:18px}.range-head{display:flex;justify-content:space-between;gap:8px;font-size:12px;margin-bottom:8px}.range-head span:first-child{color:#e7dfe4}.range-head output{font-weight:800;color:#fff}
+input[type=range]{width:100%;accent-color:var(--red);height:5px;cursor:pointer}
+.value{border:1px solid #39252b;background:#080709;border-radius:8px;padding:7px 4px;text-align:center;font-weight:800;font-size:13px}
+.copy-btn{width:100%;margin-top:14px}
+.chat-head{display:flex;gap:12px;align-items:center;margin-bottom:18px}.bot-orb{width:58px;height:58px;display:grid;place-items:center;border-radius:50%;font-size:28px;background:radial-gradient(circle,#ff445c,#43000d 70%);border:1px solid #ff566a;box-shadow:0 0 20px #ff17383b}
+.online{color:#4ce3a0;font-size:11px;margin-top:5px}.chat-box{min-height:190px;max-height:310px;overflow:auto;background:#080709;border:1px solid #48202a;border-radius:12px;padding:13px;font-size:12px;line-height:1.65;color:#ddd5da}.bubble{padding:10px 11px;border-radius:10px;background:#151014;margin:0 0 9px;white-space:pre-wrap;overflow-wrap:anywhere}.bubble.user{background:#35101a;border:1px solid #6d1729}.chat-form{display:flex;gap:8px;margin-top:12px}.chat-form input{min-width:0;flex:1}.chat-form button{padding:10px 13px}
+.notice{font-size:11px;color:#9f959c;line-height:1.55;margin-top:12px}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:18px 0 22px;border-top:1px solid #4c101e;border-bottom:1px solid #4c101e;background:#080608ad}
+.feature{text-align:center;padding:22px 10px;border-right:1px solid #ffffff12}.feature:last-child{border:0}.feature .ico{font-size:25px;color:var(--red);text-shadow:0 0 15px #ff1738}.feature strong{display:block;font-size:13px;margin:8px 0 4px}.feature span{font-size:11px;color:var(--muted)}
+.community{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:23px;border:1px solid #651325;border-radius:15px;background:linear-gradient(110deg,#16070c,#080608 65%);margin-bottom:20px}.community h3{margin:0 0 8px}.community p{font-size:12px;line-height:1.6;color:var(--muted);max-width:660px;margin:0}
+.stats{display:flex;gap:10px;flex-wrap:wrap}.stat{border:1px solid #45202a;background:#0b080a;padding:12px 16px;border-radius:10px;min-width:110px}.stat b{display:block;color:#fff;font-size:20px}.stat small{color:#a99ea5;font-size:11px}
+footer{border-top:1px solid #39101b;padding:23px 0 32px;color:#8f858d;font-size:11px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.footer-inner strong{font-size:25px;color:white;font-style:italic}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:50;background:#16090e;border:1px solid #ff1738;padding:12px 18px;border-radius:10px;box-shadow:0 0 22px #ff173844;transition:.25s;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1050px){.dashboard{grid-template-columns:1fr 1fr}.chat-panel{grid-column:1/-1}.chat-box{min-height:130px}.nav{flex-wrap:wrap}.navlinks{order:3;width:100%;justify-content:center}.music-toggle{margin-left:auto}}
+@media(max-width:650px){.wrap{padding:0 12px}.nav{padding:10px 13px}.navlinks{gap:0;justify-content:space-between}.navlinks a{font-size:11px;padding:8px 5px}.music-toggle{font-size:0;padding:10px}.music-toggle span{font-size:14px}.hero{min-height:320px}.hero-content{padding:45px 14px 35px}.hero h1{letter-spacing:-3px}.dashboard{grid-template-columns:1fr;gap:12px}.chat-panel{grid-column:auto}.panel{padding:17px}.features{grid-template-columns:repeat(2,1fr)}.feature:nth-child(2){border-right:0}.feature:last-child{grid-column:1/-1;border-top:1px solid #ffffff12}.community{grid-template-columns:1fr;padding:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr)}.stat{min-width:0;padding:10px}.stat b{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="network" aria-hidden="true"></canvas>
+<header class="topbar"><nav class="nav">
+<a class="brand" href="#home" aria-label="WARSH ana sayfa">𝑾Á𝑹𝑺𝑯</a>
+<div class="navlinks"><a href="#home">⌂ Ana Sayfa</a><a href="#generator">◎ Hassasiyet</a><a href="#bot">♙ warshx AI</a><a href="#features">✦ Özellikler</a><a href="#about">★ Hakkımızda</a></div>
+<button class="music-toggle" id="musicBtn" type="button"><span>♫</span><span id="musicLabel">Müziği Başlat</span></button>
+</nav></header>
+<main>
+<section class="hero" id="home"><div class="hero-content">
+<div class="eyebrow">FREE FIRE • DEVICE OPTIMIZATION</div>
+<h1>WÁ<span>R</span>SH</h1>
+<div class="eyebrow">F R E E &nbsp; F I R E &nbsp; S E N S I T I V I T Y</div>
+<p><strong>Daha Fazla Headshot, Daha Fazla Zafer!</strong><br>Telefonuna uygun hassasiyet önerilerini oluştur, oyun tarzına göre düzenle ve ayarlarını kolayca kopyala.</p>
+<a href="#generator"><button class="btn" type="button">◎ &nbsp; Hassasiyet Üret</button></a>
+</div></section>
+<div class="wrap">
+<section class="dashboard" id="generator">
+<div class="panel">
+<h2 class="section-title">Hassasiyet Ayarları</h2><p class="sub">Cihazını seç, sana uygun başlangıç ayarlarını oluştur.</p>
+<div class="field"><label for="brandSelect">Telefon Markası</label><select id="brandSelect"><option>iPhone</option><option>Samsung</option><option>Xiaomi</option><option>Redmi</option><option>POCO</option><option>OPPO</option><option>vivo</option><option>Realme</option><option>Huawei</option><option>Tecno</option><option>Infinix</option><option>Diğer Android</option></select></div>
+<div class="field"><label for="modelInput">Telefon Modeli</label><input id="modelInput" type="text" list="models" value="iPhone 15" placeholder="Örn. Samsung A16"><datalist id="models"><option>iPhone 15</option><option>iPhone 15 Pro Max</option><option>iPhone 13</option><option>Samsung A16</option><option>Samsung A25</option><option>Samsung A54</option><option>Redmi Note 13 Pro</option><option>Redmi Note 8</option><option>POCO X6 Pro</option><option>OPPO A5 Pro</option><option>Tecno Spark 30</option></datalist></div>
+<div class="field"><label for="playStyle">Oyun Tarzı</label><select id="playStyle"><option value="balanced">Dengeli</option><option value="rush">Yakın mesafe / Rush</option><option value="precision">Hassas nişan</option><option value="drag">Drag headshot</option></select></div>
+<div class="field"><label>Önerilen aralık</label><div class="range-note" id="rangeNote">iPhone: 100–180 / Oyun ölçeği: 200</div></div>
+<button class="btn full" id="generateBtn" type="button">◎ &nbsp; Hassasiyet Üret</button>
+<p class="notice">Her üretimde yeni bir öneri oluşturulur. Sonucu oyun içinde deneyip kendi kontrol hissine göre düzenle.</p>
+</div>
+<div class="panel">
+<h2 class="section-title">Üretilen Hassasiyet Ayarları</h2><p class="sub" id="resultSubtitle">Free Fire için başlangıç önerileri • 200'lük ölçek</p>
+<div id="ranges"></div>
+<button class="btn secondary copy-btn" id="copyBtn" type="button">▢ &nbsp; Ayarları Kopyala</button>
+<p class="notice">Bu değerler öneridir; cihaz, FPS, ekran hassasiyeti ve kişisel alışkanlıklara göre değişebilir.</p>
+</div>
+<aside class="panel chat-panel" id="bot">
+<div class="chat-head"><div class="bot-orb">🤖</div><div><strong>warshx AI</strong><div class="online">● Çevrimiçi demo</div></div></div>
+<div class="chat-box" id="chatBox" aria-live="polite"><div class="bubble">Merhaba! Ben warshx AI 👋<br>Free Fire hakkında sorularını yanıtlamaya yardımcı olabilirim.<br><br>Örnek: En iyi karakterler hangileri? Nasıl daha iyi aim alırım?<br><br><b style="color:#ff5268">Not:</b> Bu tek dosyalık sürümde sohbet yerel demo yanıtları verir. Gerçek AI için güvenli bir sunucu/API bağlantısı gerekir.</div></div>
+<form class="chat-form" id="chatForm"><input class="chat-input" id="chatInput" aria-label="Mesajın" placeholder="Free Fire hakkında sor..." maxlength="500" required><button class="btn" type="submit" aria-label="Mesajı gönder">➤</button></form>
+<p class="notice">Bu bot hassasiyet üretmez; hassasiyet ayarları soldaki paneldedir.</p>
+</aside>
+</section>
+<section class="features" id="features">
+<div class="feature"><div class="ico">◎</div><strong>Cihaza Uygun</strong><span>Marka ve modele göre öneri</span></div>
+<div class="feature"><div class="ico">✧</div><strong>Her Zaman Düzenle</strong><span>Değerleri elle ayarla</span></div>
+<div class="feature"><div class="ico">▯</div><strong>Mobil Uyumlu</strong><span>Telefon ve masaüstü</span></div>
+<div class="feature"><div class="ico">◇</div><strong>Gizlilik</strong><span>Veriler bu tarayıcıda kalır</span></div>
+<div class="feature"><div class="ico">ϟ</div><strong>Hızlı</strong><span>Kurulum veya hesap yok</span></div>
+</section>
+<section class="community" id="about">
+<div><h3>𝑾Á𝑹𝑺𝑯 dünyasına hoş geldin!</h3><p>Free Fire deneyimini geliştirmene yardımcı olacak başlangıç ayarları ve pratik oyun önerileri. Buradaki değerler resmî oyun ayarları değildir ve kafa vuruşu garantisi vermez.</p></div>
+<div class="stats"><div class="stat"><small>Üretici</small><b>∞</b><small>Yeni kombinasyonlar</small></div><div class="stat"><small>Cihaz desteği</small><b>12+</b><small>Marka seçeneği</small></div><div class="stat"><small>Ücret</small><b>₺0</b><small>Bu dosya ücretsiz</small></div></div>
+</section>
+</div>
+</main>
+<footer><div class="wrap footer-inner"><div><strong>𝑾Á𝑹𝑺𝑯</strong><div>© <span id="year"></span> WARSH. Bağımsız bir hayran projesi.</div></div><div>Free Fire, ilgili hak sahiplerinin markasıdır. Bu site Garena ile bağlantılı değildir.</div><a href="#home">Yukarı çık ↑</a></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const rangeNames=[["◎","Genel Hassasiyet"],["⊙","Kırmızı Nokta"],["⌖","2x Dürbün"],["⌖","4x Dürbün"],["⊕","AWM Dürbün"],["✣","Serbest Bakış"]];
+const state={values:[165,150,135,120,85,100]};
+function bounds(){const brand=$("#brandSelect").value;return brand==="iPhone"?[100,180]:(brand==="Samsung"||brand==="Diğer Android"||brand!=="iPhone")?[100,200]:[100,200]}
+function renderRanges(){const root=$("#ranges");root.innerHTML="";state.values.forEach((v,i)=>{const row=document.createElement("div");row.className="result-row";row.innerHTML=`<div class="aim-icon">${rangeNames[i][0]}</div><div><div class="range-head"><span>${rangeNames[i][1]}</span><output id="out${i}">${v}</output></div><input aria-label="${rangeNames[i][1]}" type="range" min="0" max="200" value="${v}" id="range${i}"></div><div class="value" id="val${i}">${v}</div>`;root.appendChild(row);row.querySelector("input").addEventListener("input",e=>{state.values[i]=Number(e.target.value);$("#out"+i).value=e.target.value;$("#val"+i).textContent=e.target.value})})}
+function generate(){const [min,max]=bounds(),style=$("#playStyle").value,brand=$("#brandSelect").value;const model=$("#modelInput").value.trim()||brand+" cihazı";const center=style==="rush"?max-12:style==="precision"?Math.round((min+max)/2):style==="drag"?max-5:Math.round((min+max)*.72);state.values=[0,1,2,3,4,5].map((n)=>{let spread=[18,25,35,43,52,38][n];let value=center-Math.round(spread*Math.random())+Math.round((Math.random()-.5)*14);return Math.max(0,Math.min(200,value))});renderRanges();$("#rangeNote").textContent=brand==="iPhone"?"iPhone: 100–180 / Oyun ölçeği: 200":brand+": 100–200 / Oyun ölçeği: 200";$("#resultSubtitle").textContent=model+" için yeni başlangıç önerisi • "+({balanced:"Dengeli",rush:"Yakın mesafe / Rush",precision:"Hassas nişan",drag:"Drag headshot"}[style]);toast("Yeni hassasiyet önerisi oluşturuldu.");}
+function getSettingsText(){return "𝑾Á𝑹𝑺𝑯 — Free Fire Hassasiyet Önerisi\nTelefon: "+($("#modelInput").value.trim()||$("#brandSelect").value)+"\n"+rangeNames.map((x,i)=>x[1]+": "+state.values[i]).join("\n")+"\n\nNot: Bunlar başlangıç önerileridir; kafa vuruşu garantisi değildir."}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2400)}
+$("#generateBtn").addEventListener("click",generate);$("#brandSelect").addEventListener("change",()=>{const b=$("#brandSelect").value;const defaults={"iPhone":"iPhone 15","Samsung":"Samsung A16","Xiaomi":"Xiaomi 14T","Redmi":"Redmi Note 13 Pro","POCO":"POCO X6 Pro","OPPO":"OPPO A5 Pro","vivo":"vivo V30","Realme":"Realme 12","Huawei":"Huawei Nova","Tecno":"Tecno Spark 30","Infinix":"Infinix Note","Diğer Android":"Android cihazı"};$("#modelInput").value=defaults[b]||b;const [lo,hi]=bounds();$("#rangeNote").textContent=b==="iPhone"?"iPhone: 100–180 / Oyun ölçeği: 200":b+": 100–200 / Oyun ölçeği: 200"});
+$("#copyBtn").addEventListener("click",async()=>{const text=getSettingsText();try{await navigator.clipboard.writeText(text);toast("Ayarlar panoya kopyalandı.");}catch(e){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();const ok=document.execCommand("copy");area.remove();toast(ok?"Ayarlar panoya kopyalandı.":"Kopyalama başarısız; değerleri elle seçebilirsin.")}});
+$("#chatForm").addEventListener("submit",e=>{e.preventDefault();const input=$("#chatInput"),q=input.value.trim();if(!q)return;addBubble(q,"user");input.value="";const lower=q.toLocaleLowerCase("tr-TR");let answer="Antrenmanda tek bir ayarı değiştirmeyi dene, hassasiyetini eğitim alanında test et ve rahat kontrol edebildiğin değerleri koru. Cihazını ve oyun tarzını söylersen daha hedefli öneriler sunabilirim.";if(/hassasiyet|sensi|ayar/.test(lower))answer="Hassasiyet üreticisi solda! Telefon modelini seç, bir ayar seti oluştur ve eğitim alanında dene. En yüksek değer herkes için en iyi değer değildir.";else if(/karakter|karakterler/.test(lower))answer="Karakter seçimini takım rolüne ve oyun tarzına göre yap. Karakter yetenekleri güncellemelerle değişebildiği için oyun içindeki güncel açıklamaları kontrol et.";else if(/headshot|kafa|aim|nişan|drag/.test(lower))answer="Aim geliştirmek için nişangâhı rakiplerin hareketine göre takip et, kısa kontrollü sürükleme hareketleri çalış ve eğitim alanında aynı ayarlarla düzenli pratik yap. Tek bir hassasiyet herkes için aynı sonucu vermez.";else if(/silah|weapon/.test(lower))answer="Silah seçerken çatışma mesafeni, geri tepme kontrolünü ve oyun tarzını düşün. Eğitim alanında birkaç silahı deneyip kontrol edebildiğini seç.";else if(/fps|kas|don|performans/.test(lower))answer="Daha akıcı oyun için arka plan uygulamalarını kapatmayı, cihazın oyun ayarlarını kontrol etmeyi ve cihaz çok ısınıyorsa kısa mola vermeyi deneyebilirsin.";setTimeout(()=>addBubble(answer,"bot"),350)});
+function addBubble(text,kind){const box=$("#chatBox"),div=document.createElement("div");div.className="bubble"+(kind==="user"?" user":"");div.textContent=text;box.appendChild(div);box.scrollTop=box.scrollHeight}
+$("#year").textContent=new Date().getFullYear();
+// A subtle animated red mesh background, with a small particle count for mobile performance.
+const canvas=$("#network"),ctx=canvas.getContext("2d");let points=[],w=0,h=0,raf=0;
+function resize(){const dpr=Math.min(window.devicePixelRatio||1,1.5);w=window.innerWidth;h=window.innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+"px";canvas.style.height=h+"px";ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.min(70,Math.max(28,Math.floor(w*h/16000)));points=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+function draw(){ctx.clearRect(0,0,w,h);for(let i=0;i<points.length;i++){const p=points[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;for(let j=i+1;j<points.length;j++){const q=points[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.hypot(dx,dy);if(dist<125){ctx.strokeStyle="rgba(255,23,56,"+(1-dist/125)*.24+")";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}ctx.fillStyle="rgba(255,42,70,.55)";ctx.fillRect(p.x,p.y,1.5,1.5)}raf=requestAnimationFrame(draw)}
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){resize();draw();window.addEventListener("resize",resize)}else{canvas.style.display="none"}
+let audioCtx=null,osc=null,gain=null,musicOn=false;
+$("#musicBtn").addEventListener("click",()=>{if(!musicOn){try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();osc=audioCtx.createOscillator();gain=audioCtx.createGain();osc.type="sine";osc.frequency.value=110;gain.gain.value=.018;osc.connect(gain);gain.connect(audioCtx.destination);osc.start();musicOn=true;$("#musicLabel").textContent="Demo sesi açık";toast("Basit demo tonu açıldı. Harici şarkı eklemek için ses dosyası gerekir.")}catch(e){toast("Bu tarayıcıda ses başlatılamadı.")}}else{if(osc){try{osc.stop()}catch(e){}osc=null}musicOn=false;$("#musicLabel").textContent="Müziği Başlat";toast("Demo sesi kapatıldı.")}});
+renderRanges();$("#rangeNote").textContent="iPhone: 100–180 / Oyun ölçeği: 200";
+</script>
+</body>
+</html>
